@@ -46,7 +46,7 @@ ALT="Divorce Rate in Different Countries"![This is an image of divorce rate visu
 
 ALT="scale in different statements"![This is an image of correlation survey visualization](/data/WechatIMG53.jpeg)
 
-###citation:
+### citation:
 Duffin, E. (2022, September 30). US - divorce rate by State 2020. Statista. Retrieved October 31, 2022, from https://www.statista.com/statistics/621703/divorce-rate-in-the-united-states-by-state/
 
 Yöntem, M. K., ADEM, K., İlhan, T., & Kılıçarslan, S. (2021, December 22). Predicting divorce. Kaggle. Retrieved October 31, 2022, from https://www.kaggle.com/datasets/csafrit2/predicting-divorce
