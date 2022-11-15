@@ -1,7 +1,7 @@
 ---
-title: "Your Project Title"
-author: "project team members"
-date: "1/22/2022"
+title: "Divorce Rate in Different States and Years"
+author: "Xiang Cheng, Benny Chen, Sena"
+date: "11/15/2022"
 output: html_document
 ---
 
@@ -9,46 +9,48 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## What is this file for?
+```{r,  echo = FALSE}
+# Summary Calculations
+source("../source/Calculation_Summary.R")
+# number of states: num_state
+# number of years: num_year
+# year of minimum divorce rate: min_year
+# year of maximum divorce rate: max_year
+# minimum divorce rate: min_rate
+# maximum divorce rate: max_rate
+# mean of divorce rate: mean_rate
+# state has the highest divorce rate: max_rate_record
+# standard deviation of divorce rate: sd_divorce_rate
+```
 
-* This file will eventually become your project report for **P02: Exploratory Data Analysis**. Specifically, you will write rmarkdown to report your exploratory data analysis.
-
-* Please see Canvas for more details.
-
-## ACCESSING THE /source DIRECTORY
-### Example 1: Source some code and run a function
 ```{r}
-# Example 1: Note relative path, which can be read: Up one
-# directory(..), down into source (/source), and 
-# then "source" an R file (data_access.R)
-source("../source/data_access.R")
-data_access_test()
+#### Dynamic paragraph:
+msg <- "We calculated and created the different values by analyzing and summarizing the rate data in different years and displayed it to the audience in the form of data visualization. This way, the audience can intuitively see the increasing or decreasing trend of the divorce rate each year. First, we used min_year and max_year to determine the start and the end of this data set. Second, we emplyed min_rate and max_rate to realize the range of divorce rate in recent years. Third, we calculated value of mean_rate to estimate the average divorce rate. Fourth, we found the max_rate_record, which was the state that had the most divorce rate. Finally, we calulated the standard deviation of divorce rate in recent 10 years finding divorce rates were clustered and relatively stable."
 ```
 
-### Example 2: Initialize a variable and then use it
-```{r}
-# Example 1: This function was "sourced" above
-msg <- data_access_test(" Morgan!")
+```{r, echo = FALSE}
+####Table:
+source("../source/Table Summary.R")
 ```
 
-> `r msg` Hope you have a good day!! 
-
-## ABOUT THIS FILE: 
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+```{r, echo = FALSE}
+#### Chart(Divorce Rate Over Time)
+source("../source/Chart1.R")
+msg < -"This chart represents divorce rate over 30 years.
+***X-axis*** is the year and ***Y  -axis*** is the divorce rate."
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r, echo = FALSE}
+#### Chart(Comparison of Divorce Rate in Washington and New Jersey)
+source("../source/Chart2.R")
+msg < -"We chose two states to represent the East and West, and this plot shows the change in divorce rates over 30 years in Washington (West) and New Jersey (East).
+***X-axis*** is the year and ***Y  -axis*** is the divorce rate."
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```{r, echo = FALSE}
+#### Chart(Divorce Rate in 2020)
+source("../source/Chart3.R")
+msg < -"This chart demonstrates to Ten States With Highest Divorce Rate in 2020.
+***X-axis*** is the divorce rate and ***Y  -axis*** is the state."
+```
+
